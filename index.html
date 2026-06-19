@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado de Conversaciones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="screen welcome-screen is-visible" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-content">
+        <p class="kicker">Actividad docente</p>
+        <h1 id="welcome-title">Mercado de Conversaciones</h1>
+        <p class="subtitle">Cuidarnos para Educar</p>
+        <button class="primary-action" id="start-activity" type="button">Iniciar</button>
+      </div>
+    </section>
+
+    <section class="screen categories-screen" id="categories-screen" aria-labelledby="categories-title">
+      <header class="screen-header">
+        <div>
+          <p class="kicker">Elige la ronda activa</p>
+          <h2 id="categories-title">Categor&iacute;as</h2>
+        </div>
+        <div class="round-pill" id="round-progress">Ronda 1 de 4</div>
+      </header>
+
+      <div class="progress-track" aria-hidden="true">
+        <span id="progress-bar"></span>
+      </div>
+
+      <section class="category-grid" id="category-grid" aria-label="Categor&iacute;as de conversaci&oacute;n"></section>
+    </section>
+
+    <section class="screen round-screen" id="round-screen" aria-labelledby="round-title">
+      <header class="screen-header">
+        <div>
+          <p class="kicker" id="round-kicker">Ruleta de preguntas</p>
+          <h2 id="round-title">Preparando pregunta</h2>
+        </div>
+        <div class="round-pill" id="round-progress-active">Ronda 1 de 4</div>
+      </header>
+
+      <section class="roulette-panel" aria-live="polite">
+        <div class="roulette-window" id="roulette-window">
+          <p class="roulette-label" id="roulette-label">La ruleta est&aacute; girando</p>
+          <h3 id="question-text">...</h3>
+        </div>
+      </section>
+
+      <section class="timer-panel">
+        <div class="timer" id="timer-display" aria-label="Tiempo restante">5:00</div>
+        <p class="timer-message" id="timer-message">El tiempo comenzar&aacute; cuando se seleccione la pregunta.</p>
+        <div class="timer-actions">
+          <button type="button" id="pause-timer">Pausar</button>
+          <button type="button" id="reset-timer">Reiniciar tiempo</button>
+          <button class="finish-action" type="button" id="finish-round">Terminar ronda</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="screen final-screen" id="final-screen" aria-labelledby="final-title">
+      <div class="welcome-content">
+        <p class="kicker">Actividad completada</p>
+        <h2 id="final-title">Gracias por participar</h2>
+        <p class="subtitle">El cuidado tambi&eacute;n se construye en conversaciones breves, honestas y presentes.</p>
+        <button class="primary-action" id="restart-activity" type="button">Reiniciar actividad</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
